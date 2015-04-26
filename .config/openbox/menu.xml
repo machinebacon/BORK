@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Run Program">
+			<action name="Execute">
+				<execute>
+					grun
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>
+					x-terminal-emulator
+				</execute>
+			</action>
+		</item>
+		<item label="Web Browser">
+			<action name="Execute">
+				<execute>
+					x-www-browser
+				</execute>
+			</action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>
+					x-terminal-emulator -e gitfm
+				</execute>
+			</action>
+		</item>
+		<item label="Text Editor">
+			<action name="Execute">
+				<execute>
+					x-terminal-emulator -e nano
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="accessories" label="Accessories">
+			<item label="Searchmonkey File Search">
+				<action name="Execute">
+					<execute>searchmonkey</execute>
+				</action>
+			</item>
+			<item label="Archive Manager">
+				<action name="Execute">
+					<execute>xarchiver</execute>
+				</action>
+			</item>
+			<item label="Text Editor">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e nano</execute>
+				</action>
+			</item>
+			<item label="Task Manager (top)">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e top</execute>
+				</action>
+			</item>
+			<item label="Terminal">
+				<action name="Execute">
+					<execute>x-terminal-emulator</execute>
+				</action>
+			</item>
+			<item label="File Manager">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e gitfm</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="graphics" label="Graphics">
+			<item label="Image Viewer">
+				<action name="Execute">
+					<execute>feh ~/images/</execute>
+				</action>
+			</item>
+			<menu id="graphicsScreenshots" label="Take Screenshot">
+				<item label="Now">
+					<action name="Execute">
+						<execute>scrotnow</execute>
+					</action>
+				</item>
+				<item label="Selected Area... (click &amp; drag mouse)">
+					<action name="Execute">
+						<execute>scrotsel</execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<menu id="multimedia" label="Multimedia">
+			<item label="Tinyradio">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e tinyradio</execute>
+				</action>
+			</item>
+			<item label="Playstream">
+				<action name="Execute">
+					<execute>playstream</execute>
+				</action>
+			</item>
+			<item label="Volume Control">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e alsamixer</execute>
+				</action>
+			</item>
+			<item label="Simpleburn">
+				<action name="Execute">
+					<execute>simpleburn</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="network" label="Network">
+			<item label="Ceni Network Manager">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e sudo ceni</execute>
+				</action>
+			</item>
+			<item label="FTP Client">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e tnftp</execute>
+				</action>
+			</item>
+			<item label="BitTorrent Client">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e info ctorrent</execute>
+				</action>
+			</item>
+			<item label="IRC Client">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e weechat</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="office" label="Office">
+			<item label="Calendar">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e calcurse</execute>
+				</action>
+			</item>
+			<item label="Notebook">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e hnb</execute>
+				</action>
+			</item>
+			<item label="Word Processor">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e wordgrinder</execute>
+				</action>
+			</item>
+			<item label="Spreadsheet">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e sc</execute>
+				</action>
+			</item>
+			<item label="Calculator">
+				<action name="Execute">
+					<execute>xcalc</execute>
+				</action>
+			</item>
+			<item label="PDF Viewer">
+				<action name="Execute">
+					<execute>xpdf</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="settings" label="Settings">
+			<menu id="obConfig" label="Openbox">
+				<item label="Edit menu.xml">
+					<action name="Execute">
+						<execute>x-terminal-emulator -e nano ~/.config/openbox/menu.xml</execute>
+					</action>
+				</item>
+				<item label="Edit rc.xml">
+					<action name="Execute">
+						<execute>x-terminal-emulator -e nano ~/.config/openbox/rc.xml</execute>
+					</action>
+				</item>
+				<item label="Edit autostart">
+					<action name="Execute">
+						<execute>x-terminal-emulator -e nano ~/.config/openbox/autostart</execute>
+					</action>
+				</item>
+				<separator/>
+				<item label="GUI Config Tool">
+					<action name="Execute">
+						<execute>
+							lxappearance
+						</execute>
+					</action>
+				</item>
+				<separator/>
+				<item label="Reconfigure">
+					<action name="Reconfigure"/>
+				</item>
+				<item label="Restart">
+					<action name="Restart"/>
+				</item>
+			</menu>
+			<menu id="tint2config" label="tint2">
+				<item label="Edit config file">
+					<action name="Execute">
+						<execute>x-terminal-emulator -e nano ~/.config/tint2/tint2rc</execute>
+					</action>
+				</item>
+				<item label="Restart tint2">
+					<action name="Execute">
+						<execute>
+							tint2restart
+						</execute>
+					</action>
+				</item>
+				<separator label="Help?"/>
+				<item label="man page">
+					<action name="Execute">
+						<execute>x-terminal-emulator -e info tint2</execute>
+					</action>
+				</item>
+				<item label="Online Help">
+					<action name="Execute">
+						<execute>
+							x-www-browser http://code.google.com/p/tint2/wiki/Welcome
+						</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Edit Default Applications">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e sudo update-alternatives --all</execute>
+				</action>
+			</item>
+			<item label="User Interface Settings">
+				<action name="Execute">
+					<execute>
+						lxappearance
+					</execute>
+				</action>
+			</item>
+			<item label="Screensaver">
+				<action name="Execute">
+					<execute>slock</execute>
+				</action>
+			</item>
+			<item label="Choose Wallpaper">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e nano ~/.config/openbox/autostart</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="system" label="System">
+			<item label="Mount devices">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e mnt</execute>
+				</action>
+			</item>
+			<item label="Edit .xinitrc">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e nano ~/.xinitrc</execute>
+				</action>
+			</item>
+			<item label="Edit .Xresources">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e nano ~/.Xresources</execute>
+				</action>
+			</item>
+			<item label="Edit inittab">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e sudo nano /etc/inittab</execute>
+				</action>
+			</item>
+			<item label="Frenchmaid">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e frenchmaid</execute>
+				</action>
+			</item>
+			<item label="Get kernels">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e get-kernel</execute>
+				</action>
+			</item>
+			<item label="Remove kernels">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e sudo kernel-remover</execute>
+				</action>
+			</item>
+			<item label="Parted">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e sudo parted</execute>
+				</action>
+			</item>
+			<item label="Package Manager">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e info apt</execute>
+				</action>
+			</item>
+			<item label="System Info">
+				<action name="Execute">
+					<execute>x-terminal-emulator -geometry 65x20 -e env-info </execute>
+				</action>
+			</item>
+			<item label="Process Viewer">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e gitps</execute>
+				</action>
+			</item>
+			<item label="Disk usage">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e ncdu</execute>
+				</action>
+			</item>
+			<item label="User Login Settings">
+				<action name="Execute">
+					<execute>x-terminal-emulator -e ~/.bash_profile</execute>
+				</action>
+			</item>
+		</menu>
+		<!--<menu id="help" label="Help" execute="cb-help-pipemenu" />-->
+		<separator/>
+		<item label="Lock Screen">
+			<action name="Execute">
+				<execute>slock</execute>
+			</action>
+		</item>
+		<item label="Suspend">
+			<action name="Execute">
+				<execute>sudo pm-suspend</execute>
+			</action>
+		</item>
+		<item label="Reboot">
+			<action name="Execute">
+				<execute>sudo /sbin/reboot</execute>
+			</action>
+		</item>
+		<item label="Poweroff">
+			<action name="Execute">
+				<execute>sudo /sbin/poweroff</execute>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>
