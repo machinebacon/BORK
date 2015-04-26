@@ -1,0 +1,7 @@
+tint2 -c ~/.config/tint2/tint2rc &
+
+# "Choose Wallpaper"
+xsetroot -bg "#333333" -mod 3 3 &
+
+# Volume icon
+volumeicon &
